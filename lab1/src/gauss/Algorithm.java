@@ -17,10 +17,14 @@ public class Algorithm<N extends Number, T extends Gauss<N, T>> {
         for(int i = 0; i < list.size() - 1; i++){
             for(int j = i + 1; j < list.size(); j++){
                 N k = list.get(j).findCoefficient(list.get(j).at(i), list.get(i).at(i));
+                System.out.println(list.get(j).at(i));
+                System.out.println(list.get(i).at(j));
+                System.out.println("KKKK:  " + k);
                 list.get(j).mul(k);
                 list.get(j).addEquation(list.get(i));
+                list.printSystem((LinearSystem<Float, MyEquation>) list);
             }
-        }
+            list.printSystem((LinearSystem<Float, MyEquation>) list);       }
     }
 
     private boolean checkSystem(LinearSystem<N, T> system){
@@ -32,4 +36,5 @@ public class Algorithm<N extends Number, T extends Gauss<N, T>> {
         }
         return true;
     }
+
 }

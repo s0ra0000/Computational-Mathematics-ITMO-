@@ -3,8 +3,8 @@ import gauss.MyEquation;
 import gauss.LinearSystem;
 
 public class Main {
-    private static final int DEFAULT_EQUATIONS_NUMBER = 2;
-    private static final int DEFAULT_VARIABLES_NUMBER = 2;
+    private static final int DEFAULT_EQUATIONS_NUMBER = 3;
+    private static final int DEFAULT_VARIABLES_NUMBER = 3;
 
     public static void main(String[] args){
         LinearSystem<Float, MyEquation> list = generateSystem();
